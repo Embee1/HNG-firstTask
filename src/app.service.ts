@@ -19,4 +19,11 @@ export class AppService {
     return this.appRepository.save(data);
 
   }
+
+  async users(){
+    return {
+      name: "John Doe",
+      email: "johndoe@gmail.com"
+    }
+  }
 }

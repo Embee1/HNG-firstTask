@@ -20,8 +20,15 @@ export class AppController {
 //    return this.appService.getDetails(SlackUsername, Backend, Age, Bio)
 //   }
 
-@Get('payload')
- getDetails(@Body() createApp: AppDto) {
-   return this.appService.getDetails(createApp)
+  @Get('payload')
+  getDetails(@Body() createApp: AppDto) {
+    return this.appService.getDetails(createApp)
+  }
+
+  @Get('user')
+  async users(){
+    return await this.appService.users();
   }
 }
+
+
